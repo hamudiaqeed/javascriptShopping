@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/95ef876d75.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/login.css">
+    </head>
+
+    <body>
+        
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="main.html">Huddi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <img class="navbar-toggler-icon" src="../img/toggle.png"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Women
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="shop.html">Dresses</a>
+                    <a class="dropdown-item disabled" href="#">Skirts</a>
+                    <a class="dropdown-item disabled" href="#">Tops</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html"><i class="fas fa-user"></i> Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <form action="action_page.php" style="border:1px solid #ccc">
+                <div class="container">
+                <h1>Login</h1>
+                <hr>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required><br><br>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        
+            
+                <div class="clearfix">
+                    <button type="button" class="btn btn-primary btn-lg btn-block"><a href="#">Login</a></button>
+                    <button type="button" class="btn btn-secondary btn-lg btn-block"><a href="../pages/main.html">Cancel</a></button>
+                </div>
+
+                </div><br>
+
+                <span class="tc"><b>Or login with</b></span><br><br>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="#" class="btn btn-primary btn-facebook"> <span>Login with Facebook</span> <i class="fab fa-facebook"></i> </a> </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="#" class="btn btn-primary btn-google"> Login with Google <i class="fab fa-google-plus"></i> </a> </div>
+                </div><br>
+
+                <div class="login_message">
+                    <p>Don’t have an account ? <a href="signup.html" class="signupbtn"> Sign up </a> </p>
+                </div>
+            </form>
+
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
