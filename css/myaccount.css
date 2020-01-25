@@ -26,10 +26,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.card {
-    margin: 20px;
-}
-
 footer {
     background-color: #5d5c61;
     margin-top: 100px;
@@ -45,10 +41,3 @@ footer ul a{
         clip-path: none;
     }
 }
-
-span {
-    color: red;
-    float: right;
-    font-size: 30px;
-}
-
