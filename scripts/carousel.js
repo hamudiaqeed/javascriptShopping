@@ -24,5 +24,5 @@ function prevSlide(){
     }
 
     counter--;
-    container.style.backgroundImage = `url(../img/fashion/carousel-${counter}.jpg)`;
+    container.style.backgroundImage = `url(../img/carousel-${counter}.jpg)`;
 }
