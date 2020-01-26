@@ -123,3 +123,6 @@ span {
     color: white;
 }
 
+#cart-item-remove {
+    float: right;
+}

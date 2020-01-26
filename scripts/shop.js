@@ -1,24 +1,18 @@
 
-// Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -38,12 +32,66 @@ window.onclick = function(event) {
 
 // cart();
 
-var cartBtns = document.querySelectorAll('.store-item-icon');
 
-for (i = 0; i < cartBtns.length; i++) {
-  cartBtns[i].onclick = function(ev) {
+
+
+// function makeItRed() {
+//   document.querySelector('.fa-shopping-cart').style.color = 'red';
+// }
+
+// function addDigitToCart(ev){
+//   // 
+//   ev.preventDefault();
+//   return console.log('test');
+// }
+
+
+/////////////////////////////////////////////
+
+// var cartBtns = document.querySelectorAll('.store-item-icon');
+
+// for (i = 0; i < cartBtns.length; i++) {
+//   cartBtns[i].onclick = function(ev) {
+//     ev.preventDefault();
+//     alert('item added to cart');
+     
+//     // var x = 1;
+//     // function append() {
+      
+//     //   for(i = 0; i < cartBtns.length; i++) {
+        
+//     //     return x++;
+//     //   }
+//     // }
+
+//     // document.querySelector('#myBtn').appendChild(document.createTextNode(append()));
+    
+
+//   }
+// }
+
+$(document).ready( function() {
+
+  var count = 0;
+
+  $('.store-item-icon').click( function(ev) {
     ev.preventDefault();
     alert('item added to cart');
-  }
-}
+
+    // var append = $('#myBtn').html( function(i, val) {
+    //  return val * 1 + 1;
+    // });
+
+    
+
+    count++;
+
+    // $('#myBtn').text(count + 'CART').css('color', 'red');
+
+    $('#myBtn').html(count + '<i class="fas fa-shopping-cart"></i>').css('color', 'red');
+
+
+  });
+
+});
 
