@@ -24,6 +24,8 @@ document.querySelector('#login').onclick = function() {
     if (email == user1.email && password == user1.password) {
         login.href = "signedin.html";
         login.click();
+    } else {
+        alert('Invalid username/password. Please try again.');
     }
 
 }

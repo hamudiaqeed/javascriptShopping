@@ -126,3 +126,16 @@ span {
 #cart-item-remove {
     float: right;
 }
+
+#shoppingTitle {
+    float: left!important;
+}
+
+.cart-item-remove {
+    color: black;
+    float: right;
+}
+
+.cart-item-remove:hover {
+    color: black;
+}
