@@ -24,6 +24,7 @@ function shoppingProducts(title, price) {
   this.price = price;
 }
 
+
 var item1 = new shoppingProducts('Nike, Dress', 199);
 var item2 = new shoppingProducts('Esprit, Dress, Pink', 154);
 var item3 = new shoppingProducts('United Colors of Benetton', 189);
@@ -108,47 +109,66 @@ $(document).ready( function() {
 
     var t = $(this).attr('id'); 
     var total = 0;
+    var allTotal = 0;
 
     if(t == 1 ){
       
       var a = $('#cart1').append(item1.title + ' - ').append(item1.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove1"><i class="fas fa-trash"></i></a>'  + '<br>').css('font-size', '30px');
       // document.getElementById('total').innerHTML = Number(item1.price) + ' lei';
-      total += item1.price;
-      
-    } else if(t == 2){
-      var b = $('#cart2').append(item2.title + ' - ').append(item2.price + ' lei' + '<a href="#" class="cart-item-remove id="remove2"><i class="fas fa-trash"></i></a>'  + '<br>').css('font-size', '30px');
-      total += item2.price;
-      
-    } else if(t == 3){
-      var c = $('.modal-body').append(item3.title + ' - ').append(item3.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove3"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
-      total += item3.price;
+      total = item1.price;
+      $('#goToForm').removeClass('disabled');
+      $('#1').addClass('disabled');
+      $('#remove1').click( function() {
+        $(a).remove();
+        document.getElementById('total').innerHTML = '0.00' + ' lei';
+        $('#goToForm').addClass('disabled');
+        $('#1').removeClass('disabled');
+        $('#myBtn').html('<i class="fas fa-shopping-cart"></i>').css('color', 'white');
+      })
+    } 
+    // else {
+    //   var b = $('#cart2').append(item2.title + ' - ').append(item2.price + ' lei' + '<a href="#" class="cart-item-remove id="remove2"><i class="fas fa-trash"></i></a>'  + '<br>').css('font-size', '30px');
+    //   total = item2.price;
+    // }
+    // } else if(t == 3){
+    //   var c = $('.modal-body').append(item3.title + ' - ').append(item3.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove3"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
+    //   total = item3.price;
 
-    } else if(t == 4){
-      var d = $('.modal-body').append(item4.title + ' - ').append(item4.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove4"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
-      total += item4.price;
+    // } else if(t == 4){
+    //   var d = $('.modal-body').append(item4.title + ' - ').append(item4.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove4"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
+    //   total = item4.price;
 
-    } else if(t == 5){
-      var e = $('.modal-body').append(item5.title + ' - ').append(item5.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove5"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
-      total += item5.price;
+    // } else if(t == 5){
+    //   var e = $('.modal-body').append(item5.title + ' - ').append(item5.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove5"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
+    //   total = item5.price;
 
-    } else if(t == 6){
-      var f = $('.modal-body').append(item6.title + ' - ').append(item6.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove6"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
-      total += item6.price;
+    // } else if(t == 6){
+    //   var f = $('.modal-body').append(item6.title + ' - ').append(item6.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove6"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
+    //   total = item6.price;
 
-    } else if(t == 7){
-      var g = $('.modal-body').append(item7.title + ' - ').append(item7.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove7"><i class="fas fa-trash"></i></a>' +'<br>').css('font-size', '30px');
-      total += item7.price;
+    // } else if(t == 7){
+    //   var g = $('.modal-body').append(item7.title + ' - ').append(item7.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove7"><i class="fas fa-trash"></i></a>' +'<br>').css('font-size', '30px');
+    //   total = item7.price;
 
-    } else {
-      var h = $('.modal-body').append(item8.title + ' - ').append(item8.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove8"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
-      // var pretH = item8.price;
-      total += item8.price;
+    // } else {
+    //   var h = $('.modal-body').append(item8.title + ' - ').append(item8.price + ' lei' + '<a href="#" class="cart-item-remove" id="remove8"><i class="fas fa-trash"></i></a>' + '<br>').css('font-size', '30px');
+    //   // var pretH = item8.price;
+    //   total = item8.price;
+    // }
+
+
+    // $().each(t, function() {
+    //   allTotal += total;
+    //   document.getElementById('total').innerHTML = Number(allTotal) + ' lei';
+    // })
+
+    while (t < 8) {
+      allTotal += total;
+      document.getElementById('total').innerHTML = Number(allTotal) + ' lei';
+      break;
     }
 
-
-    document.getElementById('total').innerHTML = Number(total) + ' lei';
-
-    console.log(total);
+    
     
   });
 
@@ -159,6 +179,8 @@ $(document).ready( function() {
   //   })
     
   // }
+
+
   
 
 });
